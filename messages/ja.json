@@ -1,0 +1,101 @@
+{
+  "CopyTextError": "ペーストボードへの書き込みに失敗しました",
+  "CopyTextOk": "貼り付けボードに書かれています",
+  "CustomTemplate": "カスタムテンプレート",
+  "NoExpiration": "期限切れにならないでください",
+  "OneClickDeployment": "ワンクリック展開",
+  "PresetTemplate": "プリセットテンプレート",
+  "Thirty_days": "30日",
+  "auth": {
+    "description": "作成者は認証を有効にしています。以下の共有コードを入力してください",
+    "form": {
+      "confirm_button": "確認",
+      "confirm_button_loading": "検証中",
+      "input_code": "共有コードを入力してください",
+      "remember_code": "共有コードを記憶する"
+    },
+    "title": "コードを共有する必要がある"
+  },
+  "cancel": "キャンセル",
+  "cannot_find_file": "index.htmlまたはindex.htmファイルは抽出されたzipアーカイブで見つかりません",
+  "continue": "確認する",
+  "copy_error": "コンテンツをクリップボードにコピーできません",
+  "copy_success": "コンテンツはクリップボードに正常にコピーされました！",
+  "delete_error": "削除が失敗しました！",
+  "delete_works_title": "このページを削除することが確認されていますか？",
+  "deployment_complete": "展開が完了しました",
+  "deployment_error": "展開に失敗しました",
+  "edit": "編集",
+  "example": "ブログのホームページを作成します",
+  "file_max_size": "サイズが20m未満のファイルをアップロードしてください",
+  "file_not_exist": "リソースファイルは存在しません",
+  "file_upload_warning": "HTMLファイルまたはzip圧縮パッケージをアップロードしてください、サイズは20m未満です",
+  "generate": "生成する",
+  "generate_complete": "生成が完了しました",
+  "generate_error": "生成は失敗しました",
+  "global": {
+    "error": {
+      "code-10001": "302 APIキーがありません",
+      "code-10002": "このツールは無効化/削除されています。詳細は <Gw>302.AI</Gw> をご覧ください。",
+      "code-10003": "ネットワークエラー、後でもう一度お試しください。",
+      "code-10004": "アカウント残高が不足しています。独自のツールを作成するには、 <Gw>302.AI</Gw> をご覧ください。",
+      "code-10005": "アカウントの資格情報が期限切れです。再度ログインしてください。",
+      "code-10006": "アカウントの総限度額に達しました。詳細は <Gw>302.AI</Gw> をご覧ください。",
+      "code-10007": "アカウントの日次限度額に達しました。詳細は <Gw>302.AI</Gw> をご覧ください。",
+      "code-10008": "現在利用可能なチャネルはありません。詳細は <Gw>302.AI</Gw> をご覧ください。",
+      "code-10009": "現在のAPI機能はサポートされていません。詳細は <Gw>302.AI</Gw> をご覧ください。",
+      "code-10010": "リソースが見つかりませんでした。詳細は <Gw>302.AI</Gw> をご覧ください。",
+      "code-10011": "無効なリクエスト",
+      "code-10012": "この無料ツールは今時間の上限に達しました。 <Gw>302.AI</Gw> を訪問して自分のツールを作成してください",
+      "code-10018": "アカウントの月次限度額に達しました。詳細は <Gw>302.AI</Gw> をご覧ください",
+      "code-1024": "AIインターフェース接続がタイムアウトしました。しばらくしてから再試行するか、<Gw>302.AI</Gw>に連絡してください。",
+      "code-default": "不明なエラー、詳細は <Gw></Gw>",
+      "code_invalid": "共有コードが無効です。詳細は302.AIをご覧ください",
+      "copy_failed": "コピーに失敗しました",
+      "network_error": "ネットワークサービスエラー。ネットワーク状態を確認するか、後ほど再試行してください",
+      "not_found": "ページが存在しません",
+      "tool_deleted": "このツールは削除されました。詳細については、<site>302.AI</site> にアクセスしてください。",
+      "tool_disabled": "このツールは無効になっています。詳細については、<site>302.AI</site> にアクセスしてください。",
+      "unknown_error": "不明なエラーが発生しました。サポートにお問い合わせください"
+    },
+    "footer": {
+      "copyright_content": "<logo></logo>による提供",
+      "copyright_leading": "AI生成のコンテンツであり、参考用です"
+    },
+    "header": {
+      "language_switcher": {
+        "switch_language": "言語を切り替える"
+      },
+      "theme_switcher": {
+        "dark": "ダークモード",
+        "light": "ライトモード",
+        "system": "システムデフォルト",
+        "toggle_theme": "テーマを切り替える"
+      },
+      "tool_info": {
+        "description": "現在のツールに関する情報",
+        "title": "について",
+        "trigger": {
+          "label": "ツール情報ポップアップを開く/閉じる"
+        }
+      }
+    }
+  },
+  "half_year": "180日",
+  "home": {
+    "title": "Webページのワンクリック展開"
+  },
+  "input_placeholder": "AI世代：例ブログのホームページを作成します",
+  "one_day": "1日",
+  "one_hour": "1時間",
+  "one_year": "1年",
+  "paste": "コード",
+  "periodOfValidity": "有効期間",
+  "preview": "プレビュー",
+  "seven_days": "7日",
+  "twelve_hours": "12時間",
+  "update": "改訂",
+  "upload": "書類",
+  "upload_tips1": "20m未満のサイズのHTMLファイルまたはzip圧縮パッケージをアップロードします",
+  "upload_tips2": "圧縮パッケージには、index.htmlファイルを含める必要があります"
+}
