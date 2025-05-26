@@ -29,7 +29,7 @@
   "example": "ブログのホームページを作成します",
   "file_max_size": "サイズが20m未満のファイルをアップロードしてください",
   "file_not_exist": "リソースファイルは存在しません",
-  "file_upload_warning": "HTMLファイルまたはzip圧縮パッケージをアップロードしてください、サイズは20m未満です",
+  "file_upload_warning": "20m未満のサイズのMD、HTMLファイル、またはZIP圧縮パッケージをアップロードしてください",
   "generate": "生成する",
   "generate_complete": "生成が完了しました",
   "generate_error": "生成は失敗しました",
@@ -85,7 +85,29 @@
   "home": {
     "title": "Webページのワンクリック展開"
   },
+  "image_upload_failed": "画像のアップロードに失敗しました",
   "input_placeholder": "AI世代：例ブログのホームページを作成します",
+  "mdEditor": {
+    "bold": "太字テキスト",
+    "checked-list": "チェックボックスリスト",
+    "code": "インラインコード",
+    "codeBlock": "コードブロック",
+    "comment": "コメントを挿入",
+    "edit": "コードを編集",
+    "fullscreen": "フルスクリーン",
+    "hr": "水平線を挿入",
+    "image": "画像",
+    "italic": "斜体テキスト",
+    "link": "リンク",
+    "live": "編集・プレビュー",
+    "ordered-list": "番号付きリスト",
+    "preview": "プレビュー",
+    "quote": "引用",
+    "strikethrough": "取り消し線テキスト",
+    "table": "テーブル",
+    "title2": "見出し",
+    "unordered-list": "箇条書きリスト"
+  },
   "one_day": "1日",
   "one_hour": "1時間",
   "one_year": "1年",
@@ -96,6 +118,6 @@
   "twelve_hours": "12時間",
   "update": "改訂",
   "upload": "書類",
-  "upload_tips1": "20m未満のサイズのHTMLファイルまたはzip圧縮パッケージをアップロードします",
+  "upload_tips1": "20m未満のサイズのMD、HTMLファイル、またはZIP圧縮パッケージをアップロードします",
   "upload_tips2": "圧縮パッケージには、index.htmlファイルを含める必要があります"
 }

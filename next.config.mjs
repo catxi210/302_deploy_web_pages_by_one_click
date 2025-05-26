@@ -1,8 +1,10 @@
 import { createJiti } from "jiti";
 import createNextIntlPlugin from "next-intl/plugin";
 import { fileURLToPath } from "node:url";
+import removeImports from "next-remove-imports";
 
 const withNextIntl = createNextIntlPlugin();
+const withRemoveImports = removeImports();
 
 // Validate env variables at build time
 const jiti = createJiti(fileURLToPath(import.meta.url));
@@ -42,4 +44,4 @@ const nextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default withRemoveImports(withNextIntl(nextConfig));

@@ -1,10 +1,12 @@
 import ky from "ky";
 import { NextResponse } from "next/server";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 export async function POST(req: Request): Promise<Response> {
   try {
     const formDataParams = await req.formData();
     const file = formDataParams.get('file');
+    const md = formDataParams.get('md') as string;
     const apiKey = formDataParams.get('apiKey') as string;
     const htmlCode = formDataParams.get('htmlCode') as string;
     const validityPeriod = formDataParams.get('validityPeriod') as string;
@@ -12,10 +14,14 @@ export async function POST(req: Request): Promise<Response> {
     let coverSrc = '';
     let url = '';
 
-    if (htmlCode) {
-      const htmlResult = await webserveHtml({ apiKey, htmlCode });
+    if (htmlCode || md) {
+      const htmlResult = await webserveHtml({ apiKey, htmlCode, md });
       if (htmlResult?.url) {
-        coverSrc = await captureWebpageImage({ apiKey, htmlCode });
+        if (md) {
+          coverSrc = await captureWebpageImage({ apiKey, url: htmlResult.url });
+        } else {
+          coverSrc = await captureWebpageImage({ apiKey, htmlCode });
+        }
         url = htmlResult.url;
       }
     } else if (file) {
@@ -41,8 +47,8 @@ export async function POST(req: Request): Promise<Response> {
   }
 }
 
-const webserveHtml = async (params: { apiKey: string, htmlCode: string }) => {
-  const { htmlCode, apiKey } = params;
+const webserveHtml = async (params: { apiKey: string, htmlCode: string, md: string }) => {
+  const { htmlCode, apiKey, md } = params;
   const result = await ky(`${process.env.NEXT_PUBLIC_API_URL}/302/webserve/html`, {
     method: 'post',
     timeout: false,
@@ -51,7 +57,8 @@ const webserveHtml = async (params: { apiKey: string, htmlCode: string }) => {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      html: htmlCode,
+      html: htmlCode || '',
+      md: md || '',
       format: "json"
     })
   }).then(res => res.json()) as { id: "string", url: "string" };
@@ -72,7 +79,7 @@ const webserveUpload = async (params: { apiKey: string, file: FormDataEntryValue
 }
 
 // 截取网页图片
-const captureWebpageImage = async (prams: { apiKey: string, htmlCode?: string, url?: string }) => {
+const captureWebpageImage = async (prams: { apiKey: string, htmlCode?: string, md?: string, url?: string }) => {
   const { apiKey, htmlCode, url } = prams
   try {
     let html = htmlCode || '';

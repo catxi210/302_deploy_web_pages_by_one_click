@@ -29,7 +29,7 @@
   "example": "做一个博客首页",
   "file_max_size": "请上传大小为20M以内的文件",
   "file_not_exist": "资源文件不存在",
-  "file_upload_warning": "请上传一个HTML文件或ZIP压缩包，大小在20M以内",
+  "file_upload_warning": "请上传一个MD、HTML文件或ZIP压缩包，大小在20M以内",
   "generate": "生成",
   "generate_complete": "生成完成",
   "generate_error": "生成失败",
@@ -85,7 +85,29 @@
   "home": {
     "title": "网页一键部署"
   },
+  "image_upload_failed": "图片上传失败",
   "input_placeholder": "AI生成：eg. 做一个博客首页",
+  "mdEditor": {
+    "bold": "添加粗体文本",
+    "checked-list": "复选列表",
+    "code": "插入代码",
+    "codeBlock": "插入代码块",
+    "comment": "插入注释",
+    "edit": "编辑代码",
+    "fullscreen": "全屏",
+    "hr": "插入HR",
+    "image": "图片",
+    "italic": "添加斜体文本",
+    "link": "链接",
+    "live": "编辑-预览",
+    "ordered-list": "有序列表",
+    "preview": "预览",
+    "quote": "引用",
+    "strikethrough": "添加删除线文本",
+    "table": "表格",
+    "title2": "标题",
+    "unordered-list": "无序列表"
+  },
   "one_day": "1天",
   "one_hour": "1小时",
   "one_year": "1年",
@@ -96,6 +118,6 @@
   "twelve_hours": "12小时",
   "update": "修改",
   "upload": "文件",
-  "upload_tips1": "上传一个HTML文件或ZIP压缩包，大小在20M以内",
+  "upload_tips1": "上传一个MD、HTML文件或ZIP压缩包，大小在20M以内",
   "upload_tips2": "压缩包内需包含一个index.html文件"
 }

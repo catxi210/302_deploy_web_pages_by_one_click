@@ -15,7 +15,7 @@ RUN npm install -g pnpm@9.5.0
 COPY package.json pnpm-lock.yaml* ./
 
 # Install dependencies
-RUN pnpm config set registry https://registry.npmmirror.com && \
+RUN pnpm config set registry https://registry.npmjs.org && \
     pnpm install --frozen-lockfile
 
 # Stage 2: Builder stage

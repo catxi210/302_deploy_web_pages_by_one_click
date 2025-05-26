@@ -26,10 +26,23 @@ export const Upload: React.FC<UploadProps> = ({ onFileSelect }) => {
   };
 
   const handleFileChange = (file: File | null) => {
-    const compressType = ['application/x-zip-compressed', 'application/zip']
+    const compressType = ['application/x-zip-compressed', 'application/zip'];
+    const mdType = 'text/markdown'; // MD 文件的 MIME 类型
+    const mdExtensions = ['.md', '.markdown']; // MD 文件的常见扩展名
+  
     if (file && fileInputRef?.current) {
-      console.log(fileInputRef.current.value);
-      if (file.size > MAX_FILE_SIZE || !(file.type === "text/html" || compressType.includes(file.type))) {
+      // 检查文件类型（MIME 类型或扩展名）
+      const isMdFile = 
+        file.type === mdType || 
+        mdExtensions.some(ext => file.name.toLowerCase().endsWith(ext));
+      if (
+        file.size > MAX_FILE_SIZE || 
+        !(
+          file.type === "text/html" || 
+          compressType.includes(file.type) || 
+          isMdFile // 新增 MD 文件支持
+        )
+      ) {
         setFileName(null);
         onFileSelect(null);
         fileInputRef.current.value = '';
@@ -93,7 +106,7 @@ export const Upload: React.FC<UploadProps> = ({ onFileSelect }) => {
       <input
         type="file"
         ref={fileInputRef}
-        accept=".html,.zip"
+        accept=".html,.zip,.md"
         onChange={(e) => handleFileChange(e.target.files?.[0] || null)}
         style={{ display: 'none' }}
       />

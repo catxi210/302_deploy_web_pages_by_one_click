@@ -14,12 +14,13 @@ import { mainOption } from "@/constants/options";
 import { addData } from "../generateList/indexDB";
 import { appConfigAtom, userConfigAtom } from "@/stores";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import { Markdown } from "./markdown";
 
 export const Main = () => {
   const t = useTranslations();
   const [{ apiKey, modelName }] = useAtom(appConfigAtom);
   const { TAB_OPTION, VALIDITY_PERIOD_OPTION } = mainOption(t)
-  const [{ tab, validityPeriod, htmlCode }, setUserAtom] = useAtom(userConfigAtom);
+  const [{ tab, validityPeriod, htmlCode, md }, setUserAtom] = useAtom(userConfigAtom);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const [isLoad, setIsLoad] = useState(false);
@@ -33,7 +34,7 @@ export const Main = () => {
     setSelectedFile(file);
   };
 
-  const onSwitchTab = (value: 'paste' | 'upload') => {
+  const onSwitchTab = (value: 'paste' | 'upload' | 'markdown') => {
     setUserAtom((v) => ({ ...v, tab: value }))
   }
 
@@ -52,6 +53,8 @@ export const Main = () => {
         formData.append('htmlCode', htmlCode);
       } else if (tab === 'upload' && selectedFile) {
         formData.append('file', selectedFile);
+      } else if (tab === 'markdown' && md) {
+        formData.append('md', md);
       }
       const result = await ky('/api/deployHtml', {
         method: 'post',
@@ -110,6 +113,7 @@ export const Main = () => {
       </div>
       <Upload onFileSelect={handleFileSelect} />
       <Paste inDeployment={isLoad} onGenerateHtml={onGenerateHtml} />
+      <Markdown />
       <div className="flex items-center justify-center gap-10 flex-wrap">
         <div className="flex items-center justify-center">
           <div className="min-w-fit w-auto">{t('periodOfValidity')}：</div>

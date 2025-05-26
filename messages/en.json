@@ -29,7 +29,7 @@
   "example": "Make a blog homepage",
   "file_max_size": "Please upload files with a size of less than 20M",
   "file_not_exist": "The resource file does not exist",
-  "file_upload_warning": "Please upload an HTML file or ZIP compressed package, the size is less than 20M",
+  "file_upload_warning": "Please upload an MD, HTML file or ZIP compressed package with a size of less than 20M",
   "generate": "Generate",
   "generate_complete": "Generation is completed",
   "generate_error": "Generation failed",
@@ -85,7 +85,29 @@
   "home": {
     "title": "Deploy web pages by one-click"
   },
+  "image_upload_failed": "Image upload failed",
   "input_placeholder": "AI Generation: eg. Make a blog homepage",
+  "mdEditor": {
+    "bold": "Bold text",
+    "checked-list": "Checkbox list",
+    "code": "Inline code",
+    "codeBlock": "Code block",
+    "comment": "Insert comment",
+    "edit": "Edit Code",
+    "fullscreen": "Fullscreen",
+    "hr": "Insert horizontal rule",
+    "image": "Image",
+    "italic": "Italic text",
+    "link": "Link",
+    "live": "Edit & Preview",
+    "ordered-list": "Numbered list",
+    "preview": "Preview",
+    "quote": "Quote",
+    "strikethrough": "Strikethrough text",
+    "table": "Table",
+    "title2": "Heading",
+    "unordered-list": "Bulleted list"
+  },
   "one_day": "1 day",
   "one_hour": "1 hour",
   "one_year": "1 year",
@@ -96,6 +118,6 @@
   "twelve_hours": "12 hours",
   "update": "Revise",
   "upload": "Document",
-  "upload_tips1": "Upload an HTML file or ZIP compressed package with a size of less than 20M",
+  "upload_tips1": "Upload an MD, HTML file or ZIP compressed package with a size of less than 20M",
   "upload_tips2": "The compressed package must include an index.html file"
 }

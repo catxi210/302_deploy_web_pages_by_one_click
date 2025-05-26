@@ -18,9 +18,10 @@ export const APP_LANG_OPTION: OptionProps[] = GLOBAL.LOCALE.SUPPORTED.map(
 );
 
 export const mainOption = (t: any) => {
-  const TAB_OPTION: { value: 'upload' | 'paste', label: string }[] = [
+  const TAB_OPTION: { value: 'upload' | 'paste' | 'markdown', label: string }[] = [
     { value: "upload", label: t('upload') },
     { value: "paste", label: t('paste') },
+    { value: "markdown", label: 'markdown' },
   ]
 
   const VALIDITY_PERIOD_OPTION: { value: string, label: string }[] = [

@@ -82,3 +82,7 @@ body {
     @apply h-fit min-h-screen bg-pageBackground text-foreground dark:bg-background;
   }
 }
+
+.w-md-editor-content{
+  height: calc(100% - 29px) !important;
+}

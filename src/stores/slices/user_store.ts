@@ -10,12 +10,23 @@ export interface IRecord {
 }
 
 export type UserConfigState = {
-    tab: 'upload' | 'paste',
+    tab: 'upload' | 'paste' | 'markdown',
     validityPeriod: string,
     htmlCode: string,
+    md: string;
     record: IRecord[]
 };
 
+const md = `
+# 你好，世界！
+
+这是正文内容，用于测试你的元数据解析代码。
+
+- 这是一条列表
+- 这也是一条列表
+
+> 引用内容`;
+ 
 export const userConfigAtom = atomWithStorage<UserConfigState>(
     "userConfig",
     {
@@ -23,6 +34,7 @@ export const userConfigAtom = atomWithStorage<UserConfigState>(
         validityPeriod: '0',
         htmlCode: '',
         record: [],
+        md,
     },
     createJSONStorage(() =>
         typeof window !== "undefined"

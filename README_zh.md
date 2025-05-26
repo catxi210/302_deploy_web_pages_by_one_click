@@ -12,16 +12,16 @@
 
 ## 界面预览
 文件上传功能，上传一个HTML文件或ZIP压缩包，即可一键部署静态网页。支持设置网页有效期，过期自动下线。
-![](docs/302_Deploy_web_pages_by_one-click_screenshot_01.png)
+![界面预览](docs/302_Deploy_web_pages_by_one-click_screenshot_01.png)
 
 代码粘贴功能，可以将代码粘贴在此处或使用AI生成代码，支持编辑和实时预览效果。
-![](docs/302_Deploy_web_pages_by_one-click_screenshot_02.png)           
+![界面预览](docs/302_Deploy_web_pages_by_one-click_screenshot_02.png)           
 
 这是实时预览的效果。
-![](docs/302_Deploy_web_pages_by_one-click_screenshot_03.png)        
+![界面预览](docs/302_Deploy_web_pages_by_one-click_screenshot_03.png)        
 
 这是成功部署网页的效果。
-![](docs/302_Deploy_web_pages_by_one-click_screenshot_04.png)      
+![界面预览](docs/302_Deploy_web_pages_by_one-click_screenshot_04.png)      
 
  
 ## 项目特性
